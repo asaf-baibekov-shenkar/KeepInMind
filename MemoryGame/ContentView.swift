@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+	
+	@ObservedObject var memoryGame = EmojiMemoryGame()
+
 	var body: some View {
-		VStack {
-			Image(systemName: "globe")
-				.imageScale(.large)
-				.foregroundColor(.accentColor)
-			Text("Hello, world!")
+		VStack(spacing: 10) {
+			ForEach(memoryGame.cardViewModels, id: \.id) { cardViewModel in
+				CardView(viewModel: cardViewModel)
+			}
 		}
-		.padding()
+		.padding(.horizontal, 10)
 	}
 }
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView()
+			.preferredColorScheme(.light)
+		ContentView()
+			.preferredColorScheme(.dark)
 	}
 }
