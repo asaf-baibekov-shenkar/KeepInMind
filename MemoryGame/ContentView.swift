@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
 	
-	@ObservedObject var memoryGame = EmojiMemoryGame()
+	@ObservedObject var emojiMemoryGame = EmojiMemoryGame()
 
 	var body: some View {
 		VStack(spacing: 10) {
-			ForEach(memoryGame.cardViewModels, id: \.id) { cardViewModel in
+			ForEach(emojiMemoryGame.cardViewModels, id: \.id) { cardViewModel in
 				CardView(viewModel: cardViewModel)
 			}
 		}
