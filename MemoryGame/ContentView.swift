@@ -13,9 +13,15 @@ struct ContentView: View {
 
 	var body: some View {
 		VStack(spacing: 10) {
-			ForEach(emojiMemoryGame.cardViewModels, id: \.id) { cardViewModel in
+			Grid(emojiMemoryGame.cardViewModels) { cardViewModel in
 				CardView(viewModel: cardViewModel)
+					.onTapGesture {
+						self.emojiMemoryGame.choose(card: cardViewModel.card)
+					}
+					.padding(5)
 			}
+			.padding(10)
+			.foregroundColor(.secondary)
 		}
 		.padding(.horizontal, 10)
 	}
