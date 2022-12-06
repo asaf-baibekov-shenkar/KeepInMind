@@ -10,9 +10,9 @@ import SwiftUI
 class Card<Content>: Identifiable, ObservableObject {
 	var id: Int = 0
 
-	var isFaceUp: Bool
-	var isMatched: Bool
-	var content: Content
+	@Published var isFaceUp: Bool
+	@Published var isMatched: Bool
+	@Published var content: Content
 	
 	init(id: Int, isFaceUp: Bool = false, isMatched: Bool = false, content: Content) {
 		self.id = id
