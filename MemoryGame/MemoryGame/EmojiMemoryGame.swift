@@ -25,7 +25,6 @@ class EmojiMemoryGame: MemoryGame, ObservableObject {
 	}
 	
 	func choose(card: Card<String>) {
-		print("Choose card: \(card)")
 		guard let firstIndex = self.cards.firstIndex(where: { $0.id == card.id }) else { return }
 		cards[firstIndex].isFaceUp.toggle()
 	}
