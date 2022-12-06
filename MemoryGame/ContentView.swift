@@ -13,10 +13,10 @@ struct ContentView: View {
 
 	var body: some View {
 		VStack(spacing: 10) {
-			Grid(emojiMemoryGame.cardViewModels) { cardViewModel in
-				CardView(viewModel: cardViewModel)
+			Grid(emojiMemoryGame.cards) { card in
+				CardView(card: card)
 					.onTapGesture {
-						self.emojiMemoryGame.choose(card: cardViewModel.card)
+						self.emojiMemoryGame.choose(card: card)
 					}
 					.padding(5)
 			}

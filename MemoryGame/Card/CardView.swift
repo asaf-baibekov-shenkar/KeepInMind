@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
 	
-	@StateObject var viewModel: CardViewModel
+	@StateObject var card: Card<String>
 	
 	@State var cornerRadius: CGFloat = 20
 	@State var lineWidth: CGFloat = 3
@@ -20,15 +20,15 @@ struct CardView: View {
 		GeometryReader { geometry in
 			let size = geometry.size
 			ZStack {
-				if viewModel.card.isFaceUp {
+				if card.isFaceUp {
 					RoundedRectangle(cornerRadius: cornerRadius)
 						.fill(Color.white)
 					RoundedRectangle(cornerRadius: cornerRadius)
 						.stroke(lineWidth: lineWidth)
 						.fill(backgroundColor)
-					Text(viewModel.card.content)
+					Text(card.content)
 						.font(.largeTitle)
-				} else if !viewModel.card.isMatched {
+				} else if !card.isMatched {
 					RoundedRectangle(cornerRadius: self.cornerRadius)
 						.fill(backgroundColor)
 				}
@@ -41,9 +41,7 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
 	static var previews: some View {
 		CardView(
-			viewModel: CardViewModel(
-				card: Card(isFaceUp: false, content: "✈️")
-			),
+			card: Card(id: 0, isFaceUp: false, content: "✈️"),
 			backgroundColor: .red
 		)
 	}

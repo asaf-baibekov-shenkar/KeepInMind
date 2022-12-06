@@ -17,7 +17,6 @@
 		2DA8310D2939DAEC0090E566 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8310C2939DAEC0090E566 /* Card.swift */; };
 		2DA831112939DB430090E566 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA831102939DB430090E566 /* MemoryGame.swift */; };
 		2DDB02C329387C0000E2C539 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB02C229387C0000E2C539 /* EmojiMemoryGame.swift */; };
-		2DDB02C52938825100E2C539 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB02C42938825100E2C539 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		2DA8310C2939DAEC0090E566 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2DA831102939DB430090E566 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		2DDB02C229387C0000E2C539 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
-		2DDB02C42938825100E2C539 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +86,6 @@
 		2DA8310E2939DB100090E566 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				2DDB02C42938825100E2C539 /* CardViewModel.swift */,
 				2D0B15C52930AC3C0028C04C /* CardView.swift */,
 				2DA8310C2939DAEC0090E566 /* Card.swift */,
 			);
@@ -181,7 +178,6 @@
 				2D0B15B62930A8930028C04C /* MemoryGameApp.swift in Sources */,
 				2DDB02C329387C0000E2C539 /* EmojiMemoryGame.swift in Sources */,
 				2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */,
-				2DDB02C52938825100E2C539 /* CardViewModel.swift in Sources */,
 				2DA831112939DB430090E566 /* MemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,10 +7,17 @@
 
 import SwiftUI
 
-struct Card<Content>: Identifiable {
+class Card<Content>: Identifiable, ObservableObject {
 	var id: Int = 0
 
-	var isFaceUp: Bool = true
-	var isMatched: Bool = false
+	var isFaceUp: Bool
+	var isMatched: Bool
 	var content: Content
+	
+	init(id: Int, isFaceUp: Bool = true, isMatched: Bool = false, content: Content) {
+		self.id = id
+		self.isFaceUp = isFaceUp
+		self.isMatched = isMatched
+		self.content = content
+	}
 }

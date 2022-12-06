@@ -32,8 +32,8 @@ struct Grid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
 
 struct GridView_Previews: PreviewProvider {
 	static var cards: [Card<String>] = [
-		Card(content: "a"),
-		Card(content: "b")
+		Card(id: 0, content: "a"),
+		Card(id: 1, content: "b")
 	]
 	static var previews: some View {
 		Grid(cards) { item in

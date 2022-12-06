@@ -10,9 +10,7 @@ import Foundation
 class EmojiMemoryGame: MemoryGame, ObservableObject {
 	typealias Content = String
 	
-	var cards: [Card<String>]
-	
-	var cardViewModels: [CardViewModel] { cards.map(CardViewModel.init) }
+	@Published var cards: [Card<String>]
 	
 	init() {
 		self.cards = ["🥶", "😎", "🤬", "👻", "😈", "🤢"]
