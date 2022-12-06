@@ -21,3 +21,9 @@ class Card<Content>: Identifiable, ObservableObject {
 		self.content = content
 	}
 }
+
+extension Card: CustomStringConvertible {
+	var description: String {
+		return "id: \(self.id), isFaceUp: \(isFaceUp), isMatched: \(isMatched), content: \(content)"
+	}
+}
