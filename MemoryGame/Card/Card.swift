@@ -14,7 +14,7 @@ class Card<Content>: Identifiable, ObservableObject {
 	var isMatched: Bool
 	var content: Content
 	
-	init(id: Int, isFaceUp: Bool = true, isMatched: Bool = false, content: Content) {
+	init(id: Int, isFaceUp: Bool = false, isMatched: Bool = false, content: Content) {
 		self.id = id
 		self.isFaceUp = isFaceUp
 		self.isMatched = isMatched
