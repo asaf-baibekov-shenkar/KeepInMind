@@ -31,6 +31,12 @@ struct CardView: View {
 				} else if !card.isMatched {
 					RoundedRectangle(cornerRadius: self.cornerRadius)
 						.fill(backgroundColor)
+				} else if card.isMatched {
+					RoundedRectangle(cornerRadius: cornerRadius)
+						.fill(Color.white)
+					RoundedRectangle(cornerRadius: cornerRadius)
+						.stroke(lineWidth: lineWidth)
+						.fill(.black)
 				}
 			}
 			.font(Font.system(size: min(size.width, size.height) * iconFontScaleFactor))
