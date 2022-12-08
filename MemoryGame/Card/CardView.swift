@@ -41,7 +41,7 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
 	static var previews: some View {
 		CardView(
-			card: Card(id: 0, isFaceUp: false, content: "✈️"),
+			card: Card(id: 0, match_id: 0, isFaceUp: false, content: "✈️"),
 			backgroundColor: .red
 		)
 	}
