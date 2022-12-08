@@ -33,7 +33,8 @@ class EmojiMemoryGame: MemoryGame, ObservableObject {
 			!chosenCard.isMatched
 		else { return }
 		if let potentialMatchIndex = indexOfCurrentFaceUpCard {
-			if cards[chosenIndex].match_id == cards[potentialMatchIndex].match_id {
+			if cards[chosenIndex].id != cards[potentialMatchIndex].id,
+			   cards[chosenIndex].match_id == cards[potentialMatchIndex].match_id {
 				cards[safe: chosenIndex]?.isMatched = true
 				cards[safe: potentialMatchIndex]?.isMatched = true
 			}
