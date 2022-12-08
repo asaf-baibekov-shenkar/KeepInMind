@@ -12,6 +12,8 @@ class EmojiMemoryGame: MemoryGame, ObservableObject {
 	
 	@Published var cards: [Card<String>]
 	
+	private var indexOfCurrentFaceUpCard: Int?
+	
 	init() {
 		self.cards = ["🥶", "😎", "🤬", "👻", "😈", "🤢"]
 			.enumerated()
@@ -25,7 +27,23 @@ class EmojiMemoryGame: MemoryGame, ObservableObject {
 	}
 	
 	func choose(card: Card<String>) {
-		guard let firstIndex = self.cards.firstIndex(where: { $0.id == card.id }) else { return }
-		cards[firstIndex].isFaceUp.toggle()
+		guard
+			let chosenIndex = cards.firstIndex(where: { $0.id == card.id }),
+			let chosenCard = cards[safe: chosenIndex],
+			!chosenCard.isMatched
+		else { return }
+		if let potentialMatchIndex = indexOfCurrentFaceUpCard {
+			if cards[chosenIndex].match_id == cards[potentialMatchIndex].match_id {
+				cards[safe: chosenIndex]?.isMatched = true
+				cards[safe: potentialMatchIndex]?.isMatched = true
+			}
+			indexOfCurrentFaceUpCard = nil
+		} else {
+			for index in cards.indices {
+				cards[safe: index]?.isFaceUp = false
+			}
+			indexOfCurrentFaceUpCard = chosenIndex
+		}
+		cards[chosenIndex].isFaceUp.toggle()
 	}
 }
