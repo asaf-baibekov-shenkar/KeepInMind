@@ -33,18 +33,20 @@ class EmojiMemoryGame: MemoryGame, ObservableObject {
 			!chosenCard.isMatched
 		else { return }
 		if let potentialMatchIndex = indexOfCurrentFaceUpCard {
-			if cards[chosenIndex].id != cards[potentialMatchIndex].id,
-			   cards[chosenIndex].match_id == cards[potentialMatchIndex].match_id {
-				cards[safe: chosenIndex]?.isMatched = true
-				cards[safe: potentialMatchIndex]?.isMatched = true
+			if cards[chosenIndex].id != cards[potentialMatchIndex].id {
+				cards[chosenIndex].isFaceUp.toggle()
+				if cards[chosenIndex].match_id == cards[potentialMatchIndex].match_id {
+					cards[safe: chosenIndex]?.isMatched = true
+					cards[safe: potentialMatchIndex]?.isMatched = true
+				}
+				indexOfCurrentFaceUpCard = nil
 			}
-			indexOfCurrentFaceUpCard = nil
 		} else {
 			for index in cards.indices {
 				cards[safe: index]?.isFaceUp = false
 			}
 			indexOfCurrentFaceUpCard = chosenIndex
+			cards[chosenIndex].isFaceUp.toggle()
 		}
-		cards[chosenIndex].isFaceUp.toggle()
 	}
 }
