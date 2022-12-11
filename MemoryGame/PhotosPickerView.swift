@@ -28,37 +28,34 @@ class PhotosPickerViewModel: ObservableObject {
 
 struct PhotosPickerView: View {
 	
-	@ObservedObject var photosPickerViewModel: PhotosPickerViewModel
+	@StateObject var photosPickerViewModel = PhotosPickerViewModel()
 	
 	var body: some View {
-		NavigationStack {
-			ScrollView {
-				VStack {
-					ForEach(photosPickerViewModel.selectedPhotosData, id: \.self) { image in
-						Image(uiImage: image)
-							.resizable()
-							.scaledToFit()
-							.cornerRadius(10.0)
-							.padding(.horizontal)
-					}
+		ScrollView {
+			VStack {
+				ForEach(photosPickerViewModel.selectedPhotosData, id: \.self) { image in
+					Image(uiImage: image)
+						.resizable()
+						.scaledToFit()
+						.cornerRadius(10.0)
+						.padding(.horizontal)
 				}
 			}
-			.navigationTitle("Photos")
-			.toolbar {
-				ToolbarItem(placement: .navigationBarTrailing) {
-					PhotosPicker(
-						selection: $photosPickerViewModel.selectedItems,
-						maxSelectionCount: 4,
-						matching: .images,
-						label: {
-							Image(systemName: "photo.on.rectangle.angled")
-						}
-					)
-					.onChange(
-						of: photosPickerViewModel.selectedItems,
-						perform: photosPickerViewModel.loadImages
-					)
-				}
+		}
+		.toolbar {
+			ToolbarItem(placement: .navigationBarTrailing) {
+				PhotosPicker(
+					selection: $photosPickerViewModel.selectedItems,
+					maxSelectionCount: 4,
+					matching: .images,
+					label: {
+						Image(systemName: "photo.on.rectangle.angled")
+					}
+				)
+				.onChange(
+					of: photosPickerViewModel.selectedItems,
+					perform: photosPickerViewModel.loadImages
+				)
 			}
 		}
 	}
