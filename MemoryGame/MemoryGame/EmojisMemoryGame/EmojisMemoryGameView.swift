@@ -14,11 +14,17 @@ struct EmojisMemoryGameView: View {
 	var body: some View {
 		VStack(spacing: 10) {
 			Grid(viewModel.cards) { card in
-				CardView(card: card)
-					.onTapGesture {
-						self.viewModel.choose(card: card)
+				CardView(
+					card: card,
+					content: { item in
+						Text(item)
+							.font(.largeTitle)
 					}
-					.padding(5)
+				)
+				.onTapGesture {
+					self.viewModel.choose(card: card)
+				}
+				.padding(5)
 			}
 			.padding(10)
 			.foregroundColor(.secondary)
