@@ -18,7 +18,7 @@
 		2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671D1293F482900C7665B /* CollectionExtension.swift */; };
 		2DA8310D2939DAEC0090E566 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8310C2939DAEC0090E566 /* Card.swift */; };
 		2DA831112939DB430090E566 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA831102939DB430090E566 /* MemoryGame.swift */; };
-		2DDB02C329387C0000E2C539 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB02C229387C0000E2C539 /* EmojiMemoryGame.swift */; };
+		2DDB02C329387C0000E2C539 /* EmojisMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB02C229387C0000E2C539 /* EmojisMemoryGameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		2D4671D1293F482900C7665B /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		2DA8310C2939DAEC0090E566 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2DA831102939DB430090E566 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
-		2DDB02C229387C0000E2C539 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		2DDB02C229387C0000E2C539 /* EmojisMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisMemoryGameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA831102939DB430090E566 /* MemoryGame.swift */,
-				2DDB02C229387C0000E2C539 /* EmojiMemoryGame.swift */,
+				2DDB02C229387C0000E2C539 /* EmojisMemoryGameViewModel.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 				2D4671CA293EA28B00C7665B /* Grid.swift in Sources */,
 				2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */,
 				2D0B15B62930A8930028C04C /* MemoryGameApp.swift in Sources */,
-				2DDB02C329387C0000E2C539 /* EmojiMemoryGame.swift in Sources */,
+				2DDB02C329387C0000E2C539 /* EmojisMemoryGameViewModel.swift in Sources */,
 				2D11DDEB2945422A00437C87 /* PhotosPickerView.swift in Sources */,
 				2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */,
 				2DA831112939DB430090E566 /* MemoryGame.swift in Sources */,

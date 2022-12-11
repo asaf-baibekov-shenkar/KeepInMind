@@ -1,5 +1,5 @@
 //
-//  EmojiMemoryGame.swift
+//  EmojisMemoryGameViewModel.swift
 //  MemoryGame
 //
 //  Created by Asaf Baibekov on 01/12/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EmojiMemoryGame: MemoryGame, ObservableObject {
+class EmojisMemoryGameViewModel: MemoryGame, ObservableObject {
 	typealias Content = String
 	
 	@Published var cards: [Card<String>]
