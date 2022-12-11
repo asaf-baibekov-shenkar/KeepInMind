@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-class Card<Content>: Identifiable, ObservableObject {
+class Card<Item>: Identifiable, ObservableObject {
 	var id: Int = 0
 	var match_id: Int
 	
 	@Published var isFaceUp: Bool
 	@Published var isMatched: Bool
-	@Published var content: Content
+	@Published var item: Item
 	
-	init(id: Int, match_id: Int, isFaceUp: Bool = false, isMatched: Bool = false, content: Content) {
+	init(id: Int, match_id: Int, isFaceUp: Bool = false, isMatched: Bool = false, item: Item) {
 		self.id = id
 		self.match_id = match_id
 		self.isFaceUp = isFaceUp
 		self.isMatched = isMatched
-		self.content = content
+		self.item = item
 	}
 }
 
 extension Card: CustomStringConvertible {
 	var description: String {
-		return "id: \(self.id), match_id: \(match_id), isFaceUp: \(isFaceUp), isMatched: \(isMatched), content: \(content)"
+		return "id: \(self.id), match_id: \(match_id), isFaceUp: \(isFaceUp), isMatched: \(isMatched), content: \(item)"
 	}
 }

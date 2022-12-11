@@ -19,8 +19,8 @@ class EmojisMemoryGameViewModel: MemoryGame, ObservableObject {
 			.enumerated()
 			.flatMap { (index, element) in
 				return [
-					Card.init(id: index * 2		, match_id: index, content: element),
-					Card.init(id: index * 2 + 1 , match_id: index, content: element)
+					Card.init(id: index * 2		, match_id: index, item: element),
+					Card.init(id: index * 2 + 1 , match_id: index, item: element)
 				]
 			}
 			.shuffled()

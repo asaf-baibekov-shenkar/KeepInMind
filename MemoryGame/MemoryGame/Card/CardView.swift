@@ -28,7 +28,7 @@ struct CardView<Item, Content: View>: View {
 					RoundedRectangle(cornerRadius: cornerRadius)
 						.stroke(lineWidth: lineWidth)
 						.fill(backgroundColor)
-					content(card.content)
+					content(card.item)
 				} else if !card.isMatched {
 					RoundedRectangle(cornerRadius: self.cornerRadius)
 						.fill(backgroundColor)
@@ -48,7 +48,7 @@ struct CardView<Item, Content: View>: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
 		CardView(
-			card: Card(id: 0, match_id: 0, isFaceUp: false, content: "✈️"),
+			card: Card(id: 0, match_id: 0, isFaceUp: false, item: "✈️"),
 			content: { item in
 				Text(item)
 					.font(.largeTitle)
