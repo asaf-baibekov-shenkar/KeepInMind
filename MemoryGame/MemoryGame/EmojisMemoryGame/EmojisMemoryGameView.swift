@@ -27,7 +27,7 @@ struct EmojisMemoryGameView: View {
 	}
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct EmojisMemoryGameView_Previews: PreviewProvider {
 	static var previews: some View {
 		EmojisMemoryGameView()
 			.preferredColorScheme(.light)
