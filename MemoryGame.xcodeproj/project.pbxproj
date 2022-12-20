@@ -16,6 +16,8 @@
 		2D11DDF92945B12700437C87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D11DDF82945B12700437C87 /* ContentView.swift */; };
 		2D1B190A2950497A0089EE8E /* PhotosPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B19092950497A0089EE8E /* PhotosPickerViewModel.swift */; };
 		2D1B190C295049AC0089EE8E /* GalleryPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */; };
+		2D1B191629518FB20089EE8E /* ImagesMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B191529518FB20089EE8E /* ImagesMemoryGameView.swift */; };
+		2D1B191A29518FEA0089EE8E /* ImagesMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B191929518FEA0089EE8E /* ImagesMemoryGameViewModel.swift */; };
 		2D4671CA293EA28B00C7665B /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671C7293EA28B00C7665B /* Grid.swift */; };
 		2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671C8293EA28B00C7665B /* GridLayout.swift */; };
 		2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671D1293F482900C7665B /* CollectionExtension.swift */; };
@@ -35,6 +37,8 @@
 		2D11DDF82945B12700437C87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D1B19092950497A0089EE8E /* PhotosPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerViewModel.swift; sourceTree = "<group>"; };
 		2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotoModel.swift; sourceTree = "<group>"; };
+		2D1B191529518FB20089EE8E /* ImagesMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesMemoryGameView.swift; sourceTree = "<group>"; };
+		2D1B191929518FEA0089EE8E /* ImagesMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesMemoryGameViewModel.swift; sourceTree = "<group>"; };
 		2D4671C7293EA28B00C7665B /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		2D4671C8293EA28B00C7665B /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		2D4671D1293F482900C7665B /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 			path = EmojisMemoryGame;
 			sourceTree = "<group>";
 		};
+		2D1B191229518F6B0089EE8E /* ImagesMemoryGame */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B191529518FB20089EE8E /* ImagesMemoryGameView.swift */,
+				2D1B191929518FEA0089EE8E /* ImagesMemoryGameViewModel.swift */,
+			);
+			path = ImagesMemoryGame;
+			sourceTree = "<group>";
+		};
 		2D3C6EEA2941AC3300044BFD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 				2DA831102939DB430090E566 /* MemoryGame.swift */,
 				2DA8310E2939DB100090E566 /* Card */,
 				2D11DDF12945AF3200437C87 /* EmojisMemoryGame */,
+				2D1B191229518F6B0089EE8E /* ImagesMemoryGame */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -207,11 +221,13 @@
 				2DA8310D2939DAEC0090E566 /* Card.swift in Sources */,
 				2D4671CA293EA28B00C7665B /* Grid.swift in Sources */,
 				2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */,
+				2D1B191629518FB20089EE8E /* ImagesMemoryGameView.swift in Sources */,
 				2D0B15B62930A8930028C04C /* MemoryGameApp.swift in Sources */,
 				2DDB02C329387C0000E2C539 /* EmojisMemoryGameViewModel.swift in Sources */,
 				2D11DDEB2945422A00437C87 /* GalleryView.swift in Sources */,
 				2D1B190C295049AC0089EE8E /* GalleryPhotoModel.swift in Sources */,
 				2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */,
+				2D1B191A29518FEA0089EE8E /* ImagesMemoryGameViewModel.swift in Sources */,
 				2D1B190A2950497A0089EE8E /* PhotosPickerViewModel.swift in Sources */,
 				2D08C28A2946709A00060AA8 /* CardView.swift in Sources */,
 				2DA831112939DB430090E566 /* MemoryGame.swift in Sources */,

@@ -41,7 +41,11 @@ struct ContentView: View {
 				)
 			}
 			.navigationDestination(for: [GalleryPhotoModel].self) { galleryPhotos in
-				GalleryView(galleryPhotos: galleryPhotos)
+				ImagesMemoryGameView(
+					viewModel: ImagesMemoryGameViewModel(
+						images: galleryPhotos
+					)
+				)
 			}
 			.navigationTitle("Memory Game")
 			.onChange(
