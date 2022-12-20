@@ -14,8 +14,8 @@ class EmojisMemoryGameViewModel: MemoryGame, ObservableObject {
 	
 	private var indexOfCurrentFaceUpCard: Int?
 	
-	init() {
-		self.cards = ["🥶", "😎", "🤬", "👻", "😈", "🤢"]
+	init(emojis: [String]) {
+		self.cards = emojis
 			.enumerated()
 			.flatMap { (index, element) in
 				return [

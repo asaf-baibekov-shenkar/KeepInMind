@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmojisMemoryGameView: View {
 	
-	@StateObject var viewModel = EmojisMemoryGameViewModel()
+	@StateObject var viewModel: EmojisMemoryGameViewModel
 
 	var body: some View {
 		VStack(spacing: 10) {
@@ -35,9 +35,10 @@ struct EmojisMemoryGameView: View {
 
 struct EmojisMemoryGameView_Previews: PreviewProvider {
 	static var previews: some View {
-		EmojisMemoryGameView()
-			.preferredColorScheme(.light)
-		EmojisMemoryGameView()
-			.preferredColorScheme(.dark)
+		let emojis = ["🥶", "😎", "🤬", "👻", "😈", "🤢"]
+		EmojisMemoryGameView(viewModel: EmojisMemoryGameViewModel(emojis: emojis))
+		.preferredColorScheme(.light)
+		EmojisMemoryGameView(viewModel: EmojisMemoryGameViewModel(emojis: emojis))
+		.preferredColorScheme(.dark)
 	}
 }
