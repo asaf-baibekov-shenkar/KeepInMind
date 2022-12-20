@@ -12,8 +12,10 @@
 		2D0B15B82930A8930028C04C /* EmojisMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0B15B72930A8930028C04C /* EmojisMemoryGameView.swift */; };
 		2D0B15BA2930A8940028C04C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0B15B92930A8940028C04C /* Assets.xcassets */; };
 		2D0B15BD2930A8940028C04C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0B15BC2930A8940028C04C /* Preview Assets.xcassets */; };
-		2D11DDEB2945422A00437C87 /* PhotosPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D11DDEA2945422A00437C87 /* PhotosPickerView.swift */; };
+		2D11DDEB2945422A00437C87 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D11DDEA2945422A00437C87 /* GalleryView.swift */; };
 		2D11DDF92945B12700437C87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D11DDF82945B12700437C87 /* ContentView.swift */; };
+		2D1B190A2950497A0089EE8E /* PhotosPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B19092950497A0089EE8E /* PhotosPickerViewModel.swift */; };
+		2D1B190C295049AC0089EE8E /* GalleryPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */; };
 		2D4671CA293EA28B00C7665B /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671C7293EA28B00C7665B /* Grid.swift */; };
 		2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671C8293EA28B00C7665B /* GridLayout.swift */; };
 		2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671D1293F482900C7665B /* CollectionExtension.swift */; };
@@ -29,8 +31,10 @@
 		2D0B15B72930A8930028C04C /* EmojisMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisMemoryGameView.swift; sourceTree = "<group>"; };
 		2D0B15B92930A8940028C04C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D0B15BC2930A8940028C04C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2D11DDEA2945422A00437C87 /* PhotosPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerView.swift; sourceTree = "<group>"; };
+		2D11DDEA2945422A00437C87 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		2D11DDF82945B12700437C87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2D1B19092950497A0089EE8E /* PhotosPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerViewModel.swift; sourceTree = "<group>"; };
+		2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotoModel.swift; sourceTree = "<group>"; };
 		2D4671C7293EA28B00C7665B /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		2D4671C8293EA28B00C7665B /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		2D4671D1293F482900C7665B /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
@@ -71,7 +75,9 @@
 			children = (
 				2D0B15B52930A8930028C04C /* MemoryGameApp.swift */,
 				2D11DDF82945B12700437C87 /* ContentView.swift */,
-				2D11DDEA2945422A00437C87 /* PhotosPickerView.swift */,
+				2D1B19092950497A0089EE8E /* PhotosPickerViewModel.swift */,
+				2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */,
+				2D11DDEA2945422A00437C87 /* GalleryView.swift */,
 				2D4671C7293EA28B00C7665B /* Grid.swift */,
 				2D4671C8293EA28B00C7665B /* GridLayout.swift */,
 				2D3C6EEA2941AC3300044BFD /* Extensions */,
@@ -203,8 +209,10 @@
 				2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */,
 				2D0B15B62930A8930028C04C /* MemoryGameApp.swift in Sources */,
 				2DDB02C329387C0000E2C539 /* EmojisMemoryGameViewModel.swift in Sources */,
-				2D11DDEB2945422A00437C87 /* PhotosPickerView.swift in Sources */,
+				2D11DDEB2945422A00437C87 /* GalleryView.swift in Sources */,
+				2D1B190C295049AC0089EE8E /* GalleryPhotoModel.swift in Sources */,
 				2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */,
+				2D1B190A2950497A0089EE8E /* PhotosPickerViewModel.swift in Sources */,
 				2D08C28A2946709A00060AA8 /* CardView.swift in Sources */,
 				2DA831112939DB430090E566 /* MemoryGame.swift in Sources */,
 			);
