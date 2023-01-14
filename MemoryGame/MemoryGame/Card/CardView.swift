@@ -19,29 +19,28 @@ struct CardView<Item, Content: View>: View {
 	let content: (Item) -> Content
 	
 	var body: some View {
-		GeometryReader { geometry in
-			let size = geometry.size
-			ZStack {
-				if card.isFaceUp {
-					RoundedRectangle(cornerRadius: cornerRadius)
-						.fill(Color.white)
-					RoundedRectangle(cornerRadius: cornerRadius)
-						.stroke(lineWidth: lineWidth)
-						.fill(backgroundColor)
-					content(card.item)
-				} else if !card.isMatched {
-					RoundedRectangle(cornerRadius: self.cornerRadius)
-						.fill(backgroundColor)
-				} else if card.isMatched {
-					RoundedRectangle(cornerRadius: cornerRadius)
-						.fill(Color.white)
-					RoundedRectangle(cornerRadius: cornerRadius)
-						.stroke(lineWidth: lineWidth)
-						.fill(.black)
-				}
+		ZStack {
+			Group {
+				RoundedRectangle(cornerRadius: cornerRadius)
+					.fill(Color.white)
+				RoundedRectangle(cornerRadius: cornerRadius)
+					.stroke(lineWidth: lineWidth)
+					.fill(backgroundColor)
+				content(card.item)
+					.padding(lineWidth)
 			}
-			.font(Font.system(size: min(size.width, size.height) * iconFontScaleFactor))
+			.opacity(card.isFaceUp ? 1.0 : 0.0)
+			RoundedRectangle(cornerRadius: cornerRadius)
+				.fill(!card.isMatched ? backgroundColor : .white)
+				.opacity(!card.isFaceUp ? 1.0 : 0.0)
+			if card.isMatched {
+				RoundedRectangle(cornerRadius: cornerRadius)
+					.stroke(lineWidth: lineWidth)
+					.fill(.black)
+					.opacity(!card.isFaceUp ? 1.0 : 0.0)
+			}
 		}
+		.rotation3DEffect(Angle.degrees(card.isFaceUp ? 0 : 180), axis: (0, 1, 0))
 	}
 }
 

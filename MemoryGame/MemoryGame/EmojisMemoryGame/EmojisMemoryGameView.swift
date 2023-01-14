@@ -22,7 +22,9 @@ struct EmojisMemoryGameView: View {
 					}
 				)
 				.onTapGesture {
-					self.viewModel.choose(card: card)
+					withAnimation(.easeInOut(duration: 0.5)) {
+						self.viewModel.choose(card: card)
+					}
 				}
 				.padding(5)
 			}

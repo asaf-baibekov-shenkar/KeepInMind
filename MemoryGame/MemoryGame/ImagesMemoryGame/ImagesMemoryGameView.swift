@@ -21,11 +21,12 @@ struct ImagesMemoryGameView: View {
 							.resizable()
 							.scaledToFit()
 							.cornerRadius(10.0)
-							.padding(.horizontal)
 					}
 				)
 				.onTapGesture {
-					self.viewModel.choose(card: card)
+					withAnimation(.easeInOut(duration: 0.5)) {
+						self.viewModel.choose(card: card)
+					}
 				}
 				.padding(5)
 			}
