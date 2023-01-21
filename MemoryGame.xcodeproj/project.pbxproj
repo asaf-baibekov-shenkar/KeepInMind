@@ -22,6 +22,7 @@
 		2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671D1293F482900C7665B /* CollectionExtension.swift */; };
 		2D84C0DA29794EE7005D2F69 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 2D84C0D929794EE7005D2F69 /* GoogleSignIn */; };
 		2D84C0DC29794EE7005D2F69 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2D84C0DB29794EE7005D2F69 /* GoogleSignInSwift */; };
+		2D84C0DF297C003E005D2F69 /* GameOverStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84C0DE297C003E005D2F69 /* GameOverStatus.swift */; };
 		2DA8310D2939DAEC0090E566 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8310C2939DAEC0090E566 /* Card.swift */; };
 		2DA831112939DB430090E566 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA831102939DB430090E566 /* MemoryGame.swift */; };
 		2DDB02C329387C0000E2C539 /* EmojisMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB02C229387C0000E2C539 /* EmojisMemoryGameViewModel.swift */; };
@@ -42,6 +43,7 @@
 		2D4671C7293EA28B00C7665B /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		2D4671C8293EA28B00C7665B /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		2D4671D1293F482900C7665B /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		2D84C0DE297C003E005D2F69 /* GameOverStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverStatus.swift; sourceTree = "<group>"; };
 		2DA8310C2939DAEC0090E566 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2DA831102939DB430090E566 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		2DDB02C229387C0000E2C539 /* EmojisMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisMemoryGameViewModel.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */,
 				2D4671C7293EA28B00C7665B /* Grid.swift */,
 				2D4671C8293EA28B00C7665B /* GridLayout.swift */,
+				2D84C0DD297C0032005D2F69 /* Enums */,
 				2D3C6EEA2941AC3300044BFD /* Extensions */,
 				2DA8310F2939DB300090E566 /* MemoryGame */,
 				2D0B15B92930A8940028C04C /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				2D4671D1293F482900C7665B /* CollectionExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D84C0DD297C0032005D2F69 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2D84C0DE297C003E005D2F69 /* GameOverStatus.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		2DA8310E2939DB100090E566 /* Card */ = {
@@ -234,6 +245,7 @@
 				2DDB02C329387C0000E2C539 /* EmojisMemoryGameViewModel.swift in Sources */,
 				2D1B190C295049AC0089EE8E /* GalleryPhotoModel.swift in Sources */,
 				2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */,
+				2D84C0DF297C003E005D2F69 /* GameOverStatus.swift in Sources */,
 				2D1B191A29518FEA0089EE8E /* ImagesMemoryGameViewModel.swift in Sources */,
 				2D1B190A2950497A0089EE8E /* PhotosPickerViewModel.swift in Sources */,
 				2D08C28A2946709A00060AA8 /* CardView.swift in Sources */,

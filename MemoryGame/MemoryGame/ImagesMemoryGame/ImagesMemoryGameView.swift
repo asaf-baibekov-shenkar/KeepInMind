@@ -12,28 +12,38 @@ struct ImagesMemoryGameView: View {
 	@StateObject var viewModel: ImagesMemoryGameViewModel
 	
     var body: some View {
-		VStack(spacing: 10) {
-			Grid(viewModel.cards) { card in
-				CardView(
-					card: card,
-					content: { item in
-						Image(uiImage: item.image)
-							.resizable()
-							.scaledToFit()
-							.cornerRadius(10.0)
-					}
-				)
-				.onTapGesture {
-					withAnimation(.easeInOut(duration: 0.5)) {
-						self.viewModel.choose(card: card)
-					}
-				}
-				.padding(5)
+		VStack {
+			Spacer()
+			HStack {
+				Spacer()
+				Text(viewModel.timerText)
+					.font(.title)
+				Spacer()
 			}
-			.padding(10)
-			.foregroundColor(.secondary)
+			Spacer()
+			VStack(spacing: 10) {
+				Grid(viewModel.cards) { card in
+					CardView(
+						card: card,
+						content: { item in
+							Image(uiImage: item.image)
+								.resizable()
+								.scaledToFit()
+								.cornerRadius(10.0)
+						}
+					)
+					.onTapGesture {
+						withAnimation(.easeInOut(duration: 0.5)) {
+							self.viewModel.choose(card: card)
+						}
+					}
+					.padding(5)
+				}
+				.padding(10)
+				.foregroundColor(.secondary)
+			}
+			.padding(.horizontal, 10)
 		}
-		.padding(.horizontal, 10)
     }
 }
 
