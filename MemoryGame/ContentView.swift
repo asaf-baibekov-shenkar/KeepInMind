@@ -7,6 +7,8 @@
 
 import SwiftUI
 import PhotosUI
+import GoogleSignIn
+import GoogleSignInSwift
 
 struct ContentView: View {
 	
@@ -16,6 +18,11 @@ struct ContentView: View {
     var body: some View {
 		NavigationStack(path: $path) {
 			VStack(alignment: .center) {
+				HStack {
+					Spacer(minLength: 30)
+					GoogleSignInButton(action: handleSignInButton)
+					Spacer(minLength: 30)
+				}
 				Text("Choose Game")
 					.font(.title)
 				Button("Emojis Memory Game") {
@@ -64,6 +71,22 @@ struct ContentView: View {
 			.onAppear(perform: photosPickerViewModel.resetSelectedPhotos)
 		}
     }
+	
+	func handleSignInButton() {
+		guard
+			let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+			let rootViewController = windowScene.windows.first?.rootViewController
+		else { return }
+		GIDSignIn.sharedInstance.signIn(
+			withPresenting: rootViewController,
+			hint: nil,
+			additionalScopes: ["https://www.googleapis.com/auth/photoslibrary.readonly"],
+			completion: { (signInResult, error) in
+				guard let result = signInResult else { return }
+				TokenManager.shared.accessToken = result.user.accessToken.tokenString
+			}
+		)
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {

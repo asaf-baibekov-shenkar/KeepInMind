@@ -17,6 +17,7 @@
 		2D1B190C295049AC0089EE8E /* GalleryPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */; };
 		2D1B191629518FB20089EE8E /* ImagesMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B191529518FB20089EE8E /* ImagesMemoryGameView.swift */; };
 		2D1B191A29518FEA0089EE8E /* ImagesMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B191929518FEA0089EE8E /* ImagesMemoryGameViewModel.swift */; };
+		2D3C94A82985791A00C3DE35 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C94A72985791A00C3DE35 /* TokenManager.swift */; };
 		2D4671CA293EA28B00C7665B /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671C7293EA28B00C7665B /* Grid.swift */; };
 		2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671C8293EA28B00C7665B /* GridLayout.swift */; };
 		2D4671D2293F482900C7665B /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4671D1293F482900C7665B /* CollectionExtension.swift */; };
@@ -40,6 +41,8 @@
 		2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotoModel.swift; sourceTree = "<group>"; };
 		2D1B191529518FB20089EE8E /* ImagesMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesMemoryGameView.swift; sourceTree = "<group>"; };
 		2D1B191929518FEA0089EE8E /* ImagesMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesMemoryGameViewModel.swift; sourceTree = "<group>"; };
+		2D3C94A72985791A00C3DE35 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		2D3C94B72985889400C3DE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2D4671C7293EA28B00C7665B /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		2D4671C8293EA28B00C7665B /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		2D4671D1293F482900C7665B /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
@@ -81,12 +84,14 @@
 		2D0B15B42930A8930028C04C /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				2D3C94B72985889400C3DE35 /* Info.plist */,
 				2D0B15B52930A8930028C04C /* MemoryGameApp.swift */,
 				2D11DDF82945B12700437C87 /* ContentView.swift */,
 				2D1B19092950497A0089EE8E /* PhotosPickerViewModel.swift */,
 				2D1B190B295049AC0089EE8E /* GalleryPhotoModel.swift */,
 				2D4671C7293EA28B00C7665B /* Grid.swift */,
 				2D4671C8293EA28B00C7665B /* GridLayout.swift */,
+				2D3C94A72985791A00C3DE35 /* TokenManager.swift */,
 				2D84C0DD297C0032005D2F69 /* Enums */,
 				2D3C6EEA2941AC3300044BFD /* Extensions */,
 				2DA8310F2939DB300090E566 /* MemoryGame */,
@@ -244,6 +249,7 @@
 				2D0B15B62930A8930028C04C /* MemoryGameApp.swift in Sources */,
 				2DDB02C329387C0000E2C539 /* EmojisMemoryGameViewModel.swift in Sources */,
 				2D1B190C295049AC0089EE8E /* GalleryPhotoModel.swift in Sources */,
+				2D3C94A82985791A00C3DE35 /* TokenManager.swift in Sources */,
 				2D4671CB293EA28B00C7665B /* GridLayout.swift in Sources */,
 				2D84C0DF297C003E005D2F69 /* GameOverStatus.swift in Sources */,
 				2D1B191A29518FEA0089EE8E /* ImagesMemoryGameViewModel.swift in Sources */,
@@ -380,6 +386,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MemoryGame/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MemoryGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,6 +415,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MemoryGame/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MemoryGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
