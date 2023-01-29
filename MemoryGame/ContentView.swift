@@ -7,20 +7,20 @@
 
 import SwiftUI
 import PhotosUI
-import GoogleSignIn
 import GoogleSignInSwift
 
 struct ContentView: View {
 	
 	@State private var path = NavigationPath()
 	@StateObject var photosPickerViewModel = PhotosPickerViewModel()
+	@StateObject var googlePhotosViewModel = GooglePhotosViewModel()
 	
     var body: some View {
 		NavigationStack(path: $path) {
 			VStack(alignment: .center) {
 				HStack {
 					Spacer(minLength: 30)
-					GoogleSignInButton(action: handleSignInButton)
+					GoogleSignInButton(action: googlePhotosViewModel.handleSignInButton)
 					Spacer(minLength: 30)
 				}
 				Text("Choose Game")
@@ -45,6 +45,14 @@ struct ContentView: View {
 							.foregroundColor(.white)
 					}
 				)
+				
+				Button("Google Images Memory Game") {
+					googlePhotosViewModel.getPhotos()
+				}
+				.padding(10)
+				.background(.blue)
+				.cornerRadius(10)
+				.foregroundColor(.white)
 			}
 			.navigationDestination(for: [GalleryPhotoModel].self) { galleryPhotos in
 				ImagesMemoryGameView(
@@ -71,22 +79,6 @@ struct ContentView: View {
 			.onAppear(perform: photosPickerViewModel.resetSelectedPhotos)
 		}
     }
-	
-	func handleSignInButton() {
-		guard
-			let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-			let rootViewController = windowScene.windows.first?.rootViewController
-		else { return }
-		GIDSignIn.sharedInstance.signIn(
-			withPresenting: rootViewController,
-			hint: nil,
-			additionalScopes: ["https://www.googleapis.com/auth/photoslibrary.readonly"],
-			completion: { (signInResult, error) in
-				guard let result = signInResult else { return }
-				TokenManager.shared.accessToken = result.user.accessToken.tokenString
-			}
-		)
-	}
 }
 
 struct ContentView_Previews: PreviewProvider {
