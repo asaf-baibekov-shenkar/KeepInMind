@@ -76,6 +76,13 @@ struct ContentView: View {
 					path.append(photosPickerViewModel.loadedImages)
 				}
 			)
+			.onChange(
+				of: googlePhotosViewModel.images,
+				perform: { images in
+					guard !images.isEmpty else { return }
+					path.append(images.map { GalleryPhotoModel(image: $0, data: Data()) })
+				}
+			)
 			.onAppear(perform: photosPickerViewModel.resetSelectedPhotos)
 		}
     }
