@@ -6,22 +6,19 @@
 //
 
 import SwiftUI
-import GoogleSignIn
 
 @main
 struct MemoryGameApp: App {
+	
+	@ObservedObject var loginViewModel = LoginViewModel()
+	
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
-				.onOpenURL { url in
-					GIDSignIn.sharedInstance.handle(url)
-				}
-				.onAppear {
-					GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-						print("error", error ?? "nil")
-						print("user", user ?? "nil")
-					}
-				}
+			if loginViewModel.isLoggedIn {
+				ContentView()
+			} else {
+				LoginView(loginViewModel: loginViewModel)
+			}
 		}
 	}
 }

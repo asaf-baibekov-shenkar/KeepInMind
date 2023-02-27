@@ -7,7 +7,6 @@
 
 import SwiftUI
 import PhotosUI
-import GoogleSignInSwift
 
 struct ContentView: View {
 	
@@ -18,11 +17,6 @@ struct ContentView: View {
     var body: some View {
 		NavigationStack(path: $path) {
 			VStack(alignment: .center) {
-				HStack {
-					Spacer(minLength: 30)
-					GoogleSignInButton(action: googlePhotosViewModel.handleSignInButton)
-					Spacer(minLength: 30)
-				}
 				Text("Choose Game")
 					.font(.title)
 				Button("Emojis Memory Game") {
