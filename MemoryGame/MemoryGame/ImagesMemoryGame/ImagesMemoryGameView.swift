@@ -33,9 +33,7 @@ struct ImagesMemoryGameView: View {
 						}
 					)
 					.onTapGesture {
-						withAnimation(.easeInOut(duration: 0.5)) {
-							self.viewModel.choose(card: card)
-						}
+						self.viewModel.choose(card: card)
 					}
 					.padding(5)
 				}
