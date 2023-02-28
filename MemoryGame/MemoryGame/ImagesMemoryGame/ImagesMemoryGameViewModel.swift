@@ -10,13 +10,15 @@ import Combine
 
 class ImagesMemoryGameViewModel: MemoryGame, ObservableObject {
 	
+	var cancellables = Set<AnyCancellable>()
+	
 	typealias Content = GalleryPhotoModel
 	
 	@Published var timerText: String
 	@Published var cards: [Card<GalleryPhotoModel>]
 	@Published var gameOverStatus: GameOverStatus = .notStarted
 	
-	@Published private var time = 0
+	@Published internal var time = 0
 	
 	private var timer: Timer?
 	private var indexOfCurrentFaceUpCard: Int?
@@ -99,6 +101,9 @@ class ImagesMemoryGameViewModel: MemoryGame, ObservableObject {
 		}
 		if cards.allSatisfy({ $0.isMatched == true }) {
 			gameOverStatus = .end
+			self.sendScore()
+				.sink(receiveCompletion: { _ in }, receiveValue: { _ in })
+				.store(in: &cancellables)
 		}
 	}
 }

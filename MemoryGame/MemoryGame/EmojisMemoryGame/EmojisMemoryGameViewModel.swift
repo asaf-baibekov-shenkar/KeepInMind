@@ -9,13 +9,16 @@ import Foundation
 import Combine
 
 class EmojisMemoryGameViewModel: MemoryGame, ObservableObject {
+	
+	var cancellables = Set<AnyCancellable>()
+	
 	typealias Content = String
 	
 	@Published var timerText: String
 	@Published var cards: [Card<String>]
 	@Published var gameOverStatus: GameOverStatus = .notStarted
 	
-	@Published private var time = 0
+	@Published var time = 0
 	
 	private var timer: Timer?
 	private var indexOfCurrentFaceUpCard: Int?
@@ -98,6 +101,9 @@ class EmojisMemoryGameViewModel: MemoryGame, ObservableObject {
 		}
 		if cards.allSatisfy({ $0.isMatched == true }) {
 			gameOverStatus = .end
+			self.sendScore()
+				.sink(receiveCompletion: { _ in }, receiveValue: { _ in })
+				.store(in: &cancellables)
 		}
 	}
 }
