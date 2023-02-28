@@ -11,11 +11,22 @@ struct Response: Decodable {
 	let message: String
 }
 
-struct Scores: Decodable {
+struct Scores: Decodable, Equatable, Hashable {
+	
 	let scores: [Score]
+	
+	static var example: Scores {
+		return .init(
+			scores: [
+				.init(score: "100"),
+				.init(score: "200"),
+				.init(score: "300"),
+			]
+		)
+	}
 }
 
-struct Score: Codable {
+struct Score: Codable, Hashable {
 	let score: String
 }
 

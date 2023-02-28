@@ -26,13 +26,16 @@ class KeepInMindAPI {
 		return decoder
 	}
 	
-	func getScores() -> AnyPublisher<Scores, Error> {
+	func getScores() -> AnyPublisher<Scores, Never> {
 		var request = URLRequest(url: baseURL.appendingPathComponent("/scores"))
 		request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 		
 		return URLSession.shared.dataTaskPublisher(for: request)
-			.map { $0.data }
+			.map {
+				$0.data
+			}
 			.decode(type: Scores.self, decoder: decoder)
+			.replaceError(with: .example)
 			.eraseToAnyPublisher()
 	}
 	
