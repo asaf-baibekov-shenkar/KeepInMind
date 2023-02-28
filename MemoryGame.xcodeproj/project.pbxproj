@@ -65,6 +65,7 @@
 		2DA8310C2939DAEC0090E566 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2DA831102939DB430090E566 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		2DDB02C229387C0000E2C539 /* EmojisMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisMemoryGameViewModel.swift; sourceTree = "<group>"; };
+		2DFC42EC29ADDBFA0089D67F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		2D0B15A92930A8930028C04C = {
 			isa = PBXGroup;
 			children = (
+				2DFC42EC29ADDBFA0089D67F /* README.md */,
 				2D0B15B42930A8930028C04C /* MemoryGame */,
 				2D0B15B32930A8930028C04C /* Products */,
 			);
